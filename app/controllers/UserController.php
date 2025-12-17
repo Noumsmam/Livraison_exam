@@ -17,9 +17,9 @@
             $userModel = new UserModel($login, $pwd);
             $user = $userModel->checkUser();
             if($user->checkLogin()){
-                Flight::render("livraison");
+                Flight::render('livraison');
             } else {
-                Flight::redirect    (BASE_URL ."/");
+                Flight::redirect(BASE_URL .'/');
             }
         }
     }

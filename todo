@@ -1,14 +1,14 @@
 page : base.sql 
 
--  base (Anthony) 
-    - table livraison_user: id,logins,pwd
-    - table livraison_entrepot: id, nom, adresse
-    - table livraison_chauffeur: id, nom, prenom, salaire_par_livraison
-    - table livraison_vehicule: id, immatriculation, type, cout_revient
-    - table livraison_status: id,status
-    - table livraison_colis: id, poids_kg, valeur_par_kg
-    - table livraison_livraison: id, colis_id, chauffeur_id, vehicule_id, entrepot_id, adresse_destination, status_id, date_livraison, cout_revient, chiffre_affaire
-    - insertion_donnees_test
+-- -  base (Anthony) ok
+--     - table livraison_user: id,logins,pwd ok
+--     - table livraison_entrepot: id, nom, adresse ok
+--     - table livraison_chauffeur: id, nom, prenom, salaire_par_livraison ok
+--     - table livraison_vehicule: id, immatriculation, type, cout_revient ok
+--     - table livraison_status: id,status ok
+--     - table livraison_colis: id, poids_kg, valeur_par_kg ok
+--     - table livraison_livraison: id, colis_id, chauffeur_id, vehicule_id, entrepot_id, adresse_destination, status_id, date_livraison, cout_revient, chiffre_affaire ok
+--     - insertion_donnees_test ok
 
 - fonction (Nomena) 
     - calcul_chiffre_affaire_livraison()
@@ -29,6 +29,7 @@ page : home.php
 
 - design (Anthony)
     - formulaire login et pwd avec bouton submit
+    
 - integration (Nomena)
     - route flight pour les post des donner de login et pwd 
     - appelle des fonctions checkUser() dans le controller user   
