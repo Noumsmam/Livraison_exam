@@ -1,0 +1,124 @@
+page : requete.sql 
+
+-  base (Anthony) 
+    - table entrepot: id, nom, adresse
+    - table chauffeur: id, nom, prenom, salaire_par_livraison
+    - table vehicule: id, immatriculation, type, cout_revient
+    - table colis: id, poids_kg, valeur_par_kg
+    - table livraison: id, colis_id, chauffeur_id, vehicule_id, entrepot_id, adresse_destination, statut (en_attente, livre, annule), date_livraison, cout_revient, chiffre_affaire
+    - insertion_donnees_test
+
+- fonction (Nomena) 
+    - calcul_chiffre_affaire_livraison()
+    - calcul_cout_total_livraison()
+
+- design (Anthony)
+
+- integration (Nomena) 
+    
+
+page : livraison.php 
+
+- base (Anthony)
+    - insertion dans la table livraison
+    - liaison avec colis, chauffeur, vehicule
+
+- fonction (Nomena)
+    - createLivraison()
+    - updateStatutLivraison()
+    - getLivraisonById()
+
+- design (Anthony)
+    - formulaire création livraison: choix chauffeur, choix véhicule, saisie adresse destination, choix statut
+    - tableau liste des livraisons
+
+- integration (Nomena)
+    - route Flight /livraison/create
+    - route Flight /livraison/update-statut
+
+page : colis.php 
+
+- base (Anthony)
+    - insertion colis (poids, valeur par kg)
+
+- fonction (Nomena)
+    - createColis()
+    - getColisByLivraison()
+
+- design (Anthony)
+    - formulaire création colis
+    - affichage poids et gain par colis
+
+- integration (Nomena)
+    - liaison colis et livraison
+    - calcul automatique du chiffre d’affaire
+
+
+page : chauffeur.php 
+
+- base (Anthony)
+    - table chauffeur avec salaire par livraison
+
+- fonction (Nomena)
+    - createChauffeur()
+    - getSalaireChauffeur()
+
+- design (Anthony)
+    - formulaire ajout chauffeur
+    - liste des chauffeurs
+
+- integration (Nomena)
+    - association chauffeur et livraison
+    - récupération automatique du salaire
+
+
+page : vehicule.php
+
+- base (Anthony)
+    - table vehicule avec coût de revient
+
+- fonction (Nomena)
+    - createVehicule()
+    - getCoutVehicule()
+
+- design (Anthony)
+    - formulaire ajout véhicule
+    - liste des véhicules
+
+- integration (Nomena)
+    - association véhicule et livraison
+
+
+page : statistiques.php () 
+
+- base (Anthony)
+    - requêtes SQL avec SUM, GROUP BY, DATE
+
+- fonction (Nomena)
+    - getBeneficeParJour()
+    - getBeneficeParMois()
+    - getBeneficeParAnnee()
+
+- design (Anthony)
+    - tableau résultats
+    - filtres par période (jour / mois / année)
+
+- integration (Nomena)
+    - route Flight /statistiques
+    - affichage dynamique des bénéfices
+
+
+page : calculs.php 
+
+- base (Anthony)
+
+- fonction (Nomena)
+    - calculBenefice()
+    - calculChiffreAffaire()
+    - calculCoutRevient()
+
+- design (Anthony)
+
+- integration (Nomena)
+    - appel automatique lors de la création d’une livraison
+    - stockage des résultats en base (Anthony)
