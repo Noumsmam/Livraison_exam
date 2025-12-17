@@ -1,6 +1,7 @@
 page : requete.sql 
 
 -  base (Anthony) 
+    - table user: id,login,pwd
     - table entrepot: id, nom, adresse
     - table chauffeur: id, nom, prenom, salaire_par_livraison
     - table vehicule: id, immatriculation, type, cout_revient
@@ -16,6 +17,20 @@ page : requete.sql
 
 - integration (Nomena) 
     
+page : home.php 
+
+- base (Anthony)
+    - insertion des donnees dans la table user 
+
+- fonction (Nomena)
+    - checkUser()
+    - getUser()
+
+- design (Anthony)
+    - formulaire login et pwd avec bouton submit
+- integration (Nomena)
+    - route flight pour les post des donner de login et pwd 
+    - appelle des fonctions checkUser() dans le controller user   
 
 page : livraison.php 
 
