@@ -1,4 +1,4 @@
-page : requete.sql 
+page : base.sql 
 
 -  base (Anthony) 
     - table livraison_user: id,logins,pwd
@@ -7,7 +7,7 @@ page : requete.sql
     - table livraison_vehicule: id, immatriculation, type, cout_revient
     - table livraison_status: id,status
     - table livraison_colis: id, poids_kg, valeur_par_kg
-    - table livraison_livraison: id, colis_id, chauffeur_id, vehicule_id, entrepot_id, adresse_destination, statut (en_attente, livre, annule), date_livraison, cout_revient, chiffre_affaire
+    - table livraison_livraison: id, colis_id, chauffeur_id, vehicule_id, entrepot_id, adresse_destination, status_id, date_livraison, cout_revient, chiffre_affaire
     - insertion_donnees_test
 
 - fonction (Nomena) 
