@@ -1,7 +1,7 @@
 page : requete.sql 
 
 -  base (Anthony) 
-    - table livraison_user: id,login,pwd
+    - table livraison_user: id,logins,pwd
     - table livraison_entrepot: id, nom, adresse
     - table livraison_chauffeur: id, nom, prenom, salaire_par_livraison
     - table livraison_vehicule: id, immatriculation, type, cout_revient
