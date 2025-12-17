@@ -8,7 +8,7 @@ page : base.sql
 --     - table livraison_status: id,status ok
 --     - table livraison_colis: id, poids_kg, valeur_par_kg ok
 --     - table livraison_livraison: id, colis_id, chauffeur_id, vehicule_id, entrepot_id, adresse_destination, status_id, date_livraison, cout_revient, chiffre_affaire ok
---     - insertion_donnees_test ok
+    - insertion_donnees_test 
 
 - fonction (Nomena) 
     - calcul_chiffre_affaire_livraison()
@@ -20,16 +20,17 @@ page : base.sql
     
 page : home.php 
 
-- base (Anthony)
-    - insertion des donnees dans la table livraison_user 
+-- - base (Anthony) ok
+    -- - insertion des donnees dans la table livraison_user ok
 
 - fonction (Nomena)
-    - checkUser()
+    -- - login() : ok
+        -- - checkUser() ok 
     - getUser()
 
 - design (Anthony)
     - formulaire login et pwd avec bouton submit
-    
+
 - integration (Nomena)
     - route flight pour les post des donner de login et pwd 
     - appelle des fonctions checkUser() dans le controller user   
