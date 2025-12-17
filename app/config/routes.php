@@ -13,19 +13,15 @@ use flight\net\Router;
 // This wraps all routes in the group with the SecurityHeadersMiddleware
 $router->group('', function(Router $router) use ($app) {
 
-	$router->get('/', function() use ($app) {
-		require __DIR__ . '/../../public/formulaire.php';
-	});
-
-	$router->post('/sortie',function(){
-		require __DIR__ . '/../../public/sortie.php';
+	$router->get('/',function () {
+		require __DIR__ .'home';
 	});
 
 
-	$router->group('/api', function() use ($router) {	
-		$router->get('/users', [ ApiExampleController::class, 'getUsers' ]);
-		$router->get('/users/@id:[0-9]', [ ApiExampleController::class, 'getUser' ]);
-		$router->post('/users/@id:[0-9]', [ ApiExampleController::class, 'updateUser' ]);
-	});
+	// $router->group('/api', function() use ($router) {	
+	// 	$router->get('/users', [ ApiExampleController::class, 'getUsers' ]);
+	// 	$router->get('/users/@id:[0-9]', [ ApiExampleController::class, 'getUser' ]);
+	// 	$router->post('/users/@id:[0-9]', [ ApiExampleController::class, 'updateUser' ]);
+	// });
 	
 }, [ SecurityHeadersMiddleware::class ]);
