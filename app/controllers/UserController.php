@@ -6,14 +6,21 @@
 
     class UserController {
         public function login(){
-            $data = Flight::request()->data;
-            $login = $data->login;
-            $password = $data->password;
+             $login = $_POST['login'] ?? '';
+            $pwd   = $_POST['pwd'] ?? '';
 
-            $userModel = new UserModel($login, $password);
+            if ($login === '' || $pwd === '') {
+                Flight::redirect('/');
+                return;
+            }
+
+            $userModel = new UserModel($login, $pwd);
             $user = $userModel->checkUser();
-
-            
+            if($user->checkLogin()){
+                Flight::render("livraison");
+            } else {
+                Flight::redirect    (BASE_URL ."/");
+            }
         }
     }
 ?>
