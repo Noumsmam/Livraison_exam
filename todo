@@ -1,12 +1,12 @@
 page : requete.sql 
 
 -  base (Anthony) 
-    - table user: id,login,pwd
-    - table entrepot: id, nom, adresse
-    - table chauffeur: id, nom, prenom, salaire_par_livraison
-    - table vehicule: id, immatriculation, type, cout_revient
-    - table colis: id, poids_kg, valeur_par_kg
-    - table livraison: id, colis_id, chauffeur_id, vehicule_id, entrepot_id, adresse_destination, statut (en_attente, livre, annule), date_livraison, cout_revient, chiffre_affaire
+    - table livraison_user: id,login,pwd
+    - table livraison_entrepot: id, nom, adresse
+    - table livraison_chauffeur: id, nom, prenom, salaire_par_livraison
+    - table livraison_vehicule: id, immatriculation, type, cout_revient
+    - table livraison_colis: id, poids_kg, valeur_par_kg
+    - table livraison_livraison: id, colis_id, chauffeur_id, vehicule_id, entrepot_id, adresse_destination, statut (en_attente, livre, annule), date_livraison, cout_revient, chiffre_affaire
     - insertion_donnees_test
 
 - fonction (Nomena) 
@@ -20,7 +20,7 @@ page : requete.sql
 page : home.php 
 
 - base (Anthony)
-    - insertion des donnees dans la table user 
+    - insertion des donnees dans la table livraison_user 
 
 - fonction (Nomena)
     - checkUser()
@@ -35,7 +35,7 @@ page : home.php
 page : livraison.php 
 
 - base (Anthony)
-    - insertion dans la table livraison
+    - insertion dans la table livraison_livraison
     - liaison avec colis, chauffeur, vehicule
 
 - fonction (Nomena)
@@ -72,7 +72,7 @@ page : colis.php
 page : chauffeur.php 
 
 - base (Anthony)
-    - table chauffeur avec salaire par livraison
+    - table livraison_chauffeur avec salaire par livraison
 
 - fonction (Nomena)
     - createChauffeur()
@@ -90,7 +90,7 @@ page : chauffeur.php
 page : vehicule.php
 
 - base (Anthony)
-    - table vehicule avec coût de revient
+    - table livraison_vehicule avec coût de revient
 
 - fonction (Nomena)
     - createVehicule()
