@@ -1,8 +1,10 @@
 <?php
 
+use app\controllers\ChauffeurController;
 use app\controllers\ColisController;
 use app\controllers\UserController;
 use app\middlewares\SecurityHeadersMiddleware;
+use app\models\ChauffeurModel;
 use app\models\ColisModel;
 use flight\Engine;
 use flight\net\Router;
@@ -27,6 +29,13 @@ $router->group('', function(Router $router) use ($app) {
 	});
 
 	$router->post('/colis/create',[ColisController::class,'createColis']);
+
+	$router->get('/chauffeur',function() {
+		$c=new ChauffeurModel(null,null,null);
+		Flight::render('chauffeur',['chauffeur' => $c->getAllChauffeur()]);
+	});
+
+	$router->post('/chauffeur/create',[ChauffeurController::class,'addCHauffeur']);
 
 	// $router->group('/api', function() use ($router) {	
 	// 	$router->get('/users', [ ApiExampleController::class, 'getUsers' ]);

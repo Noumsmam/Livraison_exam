@@ -1,3 +1,8 @@
+<?php
+    if(isset($error)){
+        echo $error;
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,30 +28,20 @@
 
     <h2>Liste des Chauffeurs</h2>
     <table border="1">
-        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Salaire par livraison</th>
+        </tr>
+        <?php foreach($chauffeur as $row) { ?>
             <tr>
-                <th>ID</th>
-                <th>Nom</th>
-                <th>Prénom</th>
-                <th>Salaire par livraison</th>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['nom']; ?></td>
+                <td><?php echo $row['prenom']; ?></td>
+                <td><?php echo $row['salaire_par_livraison']; ?></td>
             </tr>
-        </thead>
-        <tbody>
-            <?php
-            echo "<tr>
-                    <td>1</td>
-                    <td>Rakotobe</td>
-                    <td>Samoelina</td>
-                    <td>15000</td>
-                  </tr>";
-            echo "<tr>
-                    <td>2</td>
-                    <td>Zanaka</td>
-                    <td>Jean Paul</td>
-                    <td>12000</td>
-                  </tr>";
-            ?>
-        </tbody>
+        <?php } ?>
     </table>
 </body>
 </html>

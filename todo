@@ -8,15 +8,13 @@ page : base.sql
 --     - table livraison_status: id,status ok
 --     - table livraison_colis: id, poids_kg, valeur_par_kg ok
 --     - table livraison_livraison: id, colis_id, chauffeur_id, vehicule_id, entrepot_id, adresse_destination, status_id, date_livraison, cout_revient, chiffre_affaire ok
-    - insertion_donnees_test 
+    -- - insertion_donnees_test ok 
 
-- fonction (Nomena) (a faire )
-    - calcul_chiffre_affaire_livraison()
-    - calcul_cout_total_livraison()
+    -- - fonction (Nomena)
 
-- design (Anthony)
+-- - design (Anthony)
 
-- integration (Nomena) 
+-- - integration (Nomena) 
     
 -- page : home.php ok
 
@@ -77,22 +75,24 @@ page : livraison.php (dependant classe colis classe chauffeur )
 --     - calcul automatique du chiffre d’affaire
 
 
-page : chauffeur.php 
+page : chauffeur.php (en cours)
 
 -- - base (Anthony) ok
 --     - table livraison_chauffeur avec salaire par livraison ok
 
-- fonction (Nomena)
-    - createChauffeur()
-    - getSalaireChauffeur()
+-- - fonction (Nomena) ok
+    -- - addChauffeur() ok
+    --     - saveChauffeur() ok
+    -- - getSalaire() ok
+    -- - getAllChauffeur() ok
 
-- design (Anthony)
-    - formulaire ajout chauffeur
-    - liste des chauffeurs
+-- - design (Anthony) ok
+--     - formulaire ajout chauffeur ok
+--     - liste des chauffeurs ok
 
-- integration (Nomena)
-    - association chauffeur et livraison
-    - récupération automatique du salaire
+-- - integration (Nomena) ok
+--     - association chauffeur et livraison ok
+--     - récupération automatique du salaire ok
 
 
 page : vehicule.php

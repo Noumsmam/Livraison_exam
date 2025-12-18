@@ -13,7 +13,7 @@
     <h1>Livraisons en cours</h1>
 
     <div class="actions">
-        <a href="<?= BASE_URL ?>/chauffeurs" class="btn">Afficher chauffeurs</a>
+        <a href="<?= BASE_URL ?>/chauffeur" class="btn">Afficher chauffeurs</a>
         <a href="<?= BASE_URL ?>/colis" class="btn">colis</a>
         <a href="<?= BASE_URL ?>/livraison/create" class="btn">Créer livraison</a>
     </div>
