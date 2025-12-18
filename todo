@@ -26,7 +26,7 @@ page : home.php
 - fonction (Nomena) (en cours )
     -- - login() : ok
         -- - checkUser() ok 
-    - getUser()
+    -- - getUser() ok
 
 - design (Anthony)
     - formulaire login et pwd avec bouton submit
