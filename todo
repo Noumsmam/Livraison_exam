@@ -37,12 +37,13 @@ page : base.sql
 
 page : livraison.php 
 
-- base (Anthony)
-    - insertion dans la table livraison_livraison
-    - liaison avec colis, chauffeur, vehicule
+-- - base (Anthony) ok
+--     - insertion dans la table livraison_livraison ok
+--     - liaison avec colis, chauffeur, vehicule ok
 
 - fonction (Nomena)
     - createLivraison()
+        - saveLivraison()
     - updateStatutLivraison()
     - getLivraisonById()
 
