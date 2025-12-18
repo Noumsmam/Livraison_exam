@@ -35,7 +35,7 @@ page : base.sql
 --     - route flight pour les post des donner de login et pwd ok
 --     - appelle des fonctions checkUser() dans le controller user ok
 
-page : livraison.php 
+page : livraison.php (dependant classe colis classe chauffeur )
 
 -- - base (Anthony) ok
 --     - insertion dans la table livraison_livraison ok
@@ -46,6 +46,7 @@ page : livraison.php
         - saveLivraison()
     - updateStatutLivraison()
     - getLivraisonById()
+    - getAllLivraison()
 
 - design (Anthony)
     - formulaire création livraison: choix chauffeur, choix véhicule, saisie adresse destination, choix statut
@@ -56,14 +57,16 @@ page : livraison.php
     - route Flight /livraison/update-statut
 
 
-page : colis.php 
+page : colis.php (en cours)
 
 - base (Anthony)
     - insertion colis (poids, valeur par kg)
 
 - fonction (Nomena)
     - createColis()
-    - getColisByLivraison()
+        saveColis()
+    - getColisById()
+        - getColisByLivraison()
 
 - design (Anthony)
     - formulaire création colis
