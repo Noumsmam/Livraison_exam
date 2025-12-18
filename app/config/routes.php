@@ -1,6 +1,7 @@
 <?php
 
 use app\controllers\ApiExampleController;
+use app\controllers\UserController;
 use app\middlewares\SecurityHeadersMiddleware;
 use flight\Engine;
 use flight\net\Router;
@@ -14,8 +15,10 @@ use flight\net\Router;
 $router->group('', function(Router $router) use ($app) {
 
 	$router->get('/',function () {
-		Flight::render('chauffeur');
+		Flight::render('home');
 	});
+
+	$router->post('/login',[UserController::class,'login']);
 
 
 	// $router->group('/api', function() use ($router) {	

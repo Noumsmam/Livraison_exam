@@ -18,22 +18,22 @@ page : base.sql
 
 - integration (Nomena) 
     
-page : home.php 
+-- page : home.php ok
 
 -- - base (Anthony) ok
     -- - insertion des donnees dans la table livraison_user ok
 
-- fonction (Nomena) (en cours )
+-- - fonction (Nomena) ok
     -- - login() : ok
         -- - checkUser() ok 
     -- - getUser() ok
 
-- design (Anthony)
-    - formulaire login et pwd avec bouton submit
+-- - design (Anthony) ok
+--     - formulaire login et pwd avec bouton submit ok
 
-- integration (Nomena)
-    - route flight pour les post des donner de login et pwd 
-    - appelle des fonctions checkUser() dans le controller user   
+-- - integration (Nomena) ok
+--     - route flight pour les post des donner de login et pwd ok
+--     - appelle des fonctions checkUser() dans le controller user ok
 
 page : livraison.php 
 
@@ -53,6 +53,7 @@ page : livraison.php
 - integration (Nomena)
     - route Flight /livraison/create
     - route Flight /livraison/update-statut
+
 
 page : colis.php 
 
