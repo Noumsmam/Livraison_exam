@@ -3,9 +3,11 @@
 use app\controllers\ChauffeurController;
 use app\controllers\ColisController;
 use app\controllers\UserController;
+use app\controllers\VehiculeController;
 use app\middlewares\SecurityHeadersMiddleware;
 use app\models\ChauffeurModel;
 use app\models\ColisModel;
+use app\models\VehiculeModel;
 use flight\Engine;
 use flight\net\Router;
 
@@ -36,6 +38,13 @@ $router->group('', function(Router $router) use ($app) {
 	});
 
 	$router->post('/chauffeur/create',[ChauffeurController::class,'addCHauffeur']);
+
+	$router->get('/vehicule',function() {
+		$v = new VehiculeModel(null,null,null);
+		Flight::render('vehicule',['vehicule' => $v->getAllVehicule()]);
+	});
+
+	$router->post('/vehicule/create',[VehiculeController::class,'createVehicule']);
 
 	// $router->group('/api', function() use ($router) {	
 	// 	$router->get('/users', [ ApiExampleController::class, 'getUsers' ]);

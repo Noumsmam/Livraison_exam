@@ -1,4 +1,4 @@
-page : base.sql 
+-- fichier : base.sql 
 
 -- -  base (Anthony) ok
 --     - table livraison_user: id,logins,pwd ok
@@ -75,7 +75,7 @@ page : livraison.php (dependant classe colis classe chauffeur )
 --     - calcul automatique du chiffre d’affaire
 
 
-page : chauffeur.php (en cours)
+-- page : chauffeur.php ok
 
 -- - base (Anthony) ok
 --     - table livraison_chauffeur avec salaire par livraison ok
@@ -95,21 +95,23 @@ page : chauffeur.php (en cours)
 --     - récupération automatique du salaire ok
 
 
-page : vehicule.php
+-- page : vehicule.php ok
 
-- base (Anthony)
-    - table livraison_vehicule avec coût de revient
+-- - base (Anthony) ok
+--     - table livraison_vehicule avec coût de revient ok
 
-- fonction (Nomena)
-    - createVehicule()
-    - getCoutVehicule()
+-- - fonction (Nomena) ok
+    -- - createVehicule() ok
+        -- - saveVehicule() ok
+    -- - getCout() ok
+    -- - getAllVehicule() ok
 
-- design (Anthony)
-    - formulaire ajout véhicule
-    - liste des véhicules
+-- - design (Anthony) ok
+--     - formulaire ajout véhicule ok
+--     - liste des véhicules ok
 
-- integration (Nomena)
-    - association véhicule et livraison
+-- - integration (Nomena) ok
+--     - association véhicule et livraison ok
 
 
 page : statistiques.php () 
@@ -131,7 +133,7 @@ page : statistiques.php ()
     - affichage dynamique des bénéfices
 
 
-page : calculs.php 
+fichier : calculs.php 
 
 - base (Anthony)
 

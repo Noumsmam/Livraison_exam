@@ -1,3 +1,8 @@
+<?php
+    if(isset($error)) {
+        echo $error;
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,30 +28,20 @@
 
     <h2>Liste des Véhicules</h2>
     <table border="1">
-        <thead>
+         <tr>
+            <th>ID</th>
+            <th>Immatriculation</th>
+            <th>Modèle</th>
+            <th>Coût de revient</th>
+        </tr>
+        <?php foreach($vehicule as $row) { ?>
             <tr>
-                <th>ID</th>
-                <th>Immatriculation</th>
-                <th>Modèle</th>
-                <th>Coût de revient</th>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['immatriculation']; ?></td>
+                <td><?php echo $row['type']; ?></td>
+                <td><?php echo $row['cout_revient']; ?></td>
             </tr>
-        </thead>
-        <tbody>
-            <?php
-            echo "<tr>
-                    <td>1</td>
-                    <td>1234-TAA</td>
-                    <td>Sprinter</td>
-                    <td>5000</td>
-                  </tr>";
-            echo "<tr>
-                    <td>2</td>
-                    <td>5678-TBB</td>
-                    <td>Suzuki</td>
-                    <td>7000</td>
-                  </tr>";
-            ?>
-        </tbody>
+        <?php } ?>
     </table>
 </body>
 </html>
