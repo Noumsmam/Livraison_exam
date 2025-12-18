@@ -47,6 +47,7 @@
             $db=Flight::db();
             $STMT=$db->prepare("SELECT Colis.id AS id_colis FROM livraison_colis JOIN livraison_livraison ON livraison_colis.id = livraison_livraison.colis_id WHERE livraison_livraison.id = ?;");
             $STMT->execute([$idLivraison]);
+            return $STMT->fetch();
         }
     }
 ?>
