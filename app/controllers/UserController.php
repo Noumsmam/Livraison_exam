@@ -10,7 +10,7 @@
             $pwd   = $_POST['pwd'] ?? '';
 
             if ($login === '' || $pwd === '') {
-                Flight::redirect('/');
+                Flight::redirect(BASE_URL .'/');
                 return;
             }
 
