@@ -1,3 +1,11 @@
+<?php
+    if(isset($error)){
+        echo $error;
+    }
+    if(isset($colis)){
+        // var_dump($colis);
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,30 +31,20 @@
 
     <h2>Liste des Colis</h2>
     <table border="1">
-        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Poids (kg)</th>
+            <th>Description</th>
+            <th>Valeur par kg</th>
+        </tr>
+        <?php foreach($colis as $row){ ?>
             <tr>
-                <th>ID</th>
-                <th>Poids (kg)</th>
-                <th>Description</th>
-                <th>Valeur par kg</th>
+                <td><?php echo $row['id'] ;?></td>
+                <td><?php echo $row['description'] ;?></td>
+                <td><?php echo $row['poids_kg'] ;?></td>
+                <td><?php echo $row['valeur_par_kg'] ;?></td>
             </tr>
-        </thead>
-        <tbody>
-            <?php
-            echo "<tr>
-                    <td>1</td>
-                    <td>10</td>
-                    <td>Colis fragile</td>
-                    <td>500</td>
-                  </tr>";
-            echo "<tr>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>Colis standard</td>
-                    <td>300</td>
-                  </tr>";
-            ?>
-        </tbody>
+        <?php } ?>
     </table>
 </body>
 </html>

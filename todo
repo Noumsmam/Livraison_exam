@@ -57,30 +57,30 @@ page : livraison.php (dependant classe colis classe chauffeur )
     - route Flight /livraison/update-statut
 
 
-page : colis.php (en cours)
+-- page : colis.php ok
 
-- base (Anthony)
-    - insertion colis (poids, valeur par kg)
+-- - base (Anthony) ok
+--     - insertion colis (poids, valeur par kg) ok
 
-- fonction (Nomena)
-    -- - createColis() teste a faire 
-    --     saveColis() teste a faire
-    -- - getColisById() teste a faire
-    -- - getColisByLivraison() teste a faire
+-- - fonction (Nomena) ok
+    -- - createColis()  ok
+    --     saveColis() ok
+    -- - getColisById() ok
+    -- - getColisByLivraison() ok
 
-- design (Anthony)
-    - formulaire création colis
-    - affichage poids et gain par colis
+-- - design (Anthony) ok
+--     - formulaire création colis ok
+--     - affichage poids et gain par colis ok
 
-- integration (Nomena)
-    - liaison colis et livraison
-    - calcul automatique du chiffre d’affaire
+-- - integration (Nomena)
+--     - liaison colis et livraison
+--     - calcul automatique du chiffre d’affaire
 
 
 page : chauffeur.php 
 
-- base (Anthony)
-    - table livraison_chauffeur avec salaire par livraison
+-- - base (Anthony) ok
+--     - table livraison_chauffeur avec salaire par livraison ok
 
 - fonction (Nomena)
     - createChauffeur()
@@ -118,7 +118,7 @@ page : statistiques.php ()
     - requêtes SQL avec SUM, GROUP BY, DATE
 
 - fonction (Nomena)
-    - getBeneficeParJour()
+    -- - getBeneficeParJour()
     - getBeneficeParMois()
     - getBeneficeParAnnee()
 
@@ -137,6 +137,7 @@ page : calculs.php
 
 - fonction (Nomena)
     - calculBenefice()
+        -- - calculBeneficeLivraison() ok
     - calculChiffreAffaire()
     - calculCoutRevient()
 

@@ -1,5 +1,5 @@
 <?php
-    namespace App\Models;
+    namespace app\models;
     use Flight;
 
     Class ColisModel {
@@ -48,6 +48,14 @@
             $STMT=$db->prepare("SELECT Colis.id AS id_colis FROM livraison_colis JOIN livraison_livraison ON livraison_colis.id = livraison_livraison.colis_id WHERE livraison_livraison.id = ?;");
             $STMT->execute([$idLivraison]);
             return $STMT->fetch();
+        }
+
+        public function getAllColis() {
+            $db = Flight::db();
+            $STMT = $db->prepare("SELECT * FROM livraison_colis;");
+            $STMT->execute();
+            $result = $STMT->fetchAll(\PDO::FETCH_ASSOC);
+            return $result;
         }
     }
 ?>

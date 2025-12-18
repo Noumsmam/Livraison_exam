@@ -1,8 +1,9 @@
 <?php
 
-use app\controllers\ApiExampleController;
+use app\controllers\ColisController;
 use app\controllers\UserController;
 use app\middlewares\SecurityHeadersMiddleware;
+use app\models\ColisModel;
 use flight\Engine;
 use flight\net\Router;
 
@@ -19,7 +20,13 @@ $router->group('', function(Router $router) use ($app) {
 	});
 
 	$router->post('/login',[UserController::class,'login']);
-	
+
+	$router->get('/colis',function() {
+		$colis = new ColisModel(null,null,null);
+		Flight::render('colis',['colis' => $colis->getAllColis()]);
+	});
+
+	$router->post('/colis/create',[ColisController::class,'createColis']);
 
 	// $router->group('/api', function() use ($router) {	
 	// 	$router->get('/users', [ ApiExampleController::class, 'getUsers' ]);

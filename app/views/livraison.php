@@ -7,7 +7,6 @@
 </head>
 <body>
 
-<?php require __DIR__ . '/inc/nav.php'; ?>
 
 <div class="container">
 
@@ -15,7 +14,7 @@
 
     <div class="actions">
         <a href="<?= BASE_URL ?>/chauffeurs" class="btn">Afficher chauffeurs</a>
-        <a href="<?= BASE_URL ?>/colis/create" class="btn">Créer colis</a>
+        <a href="<?= BASE_URL ?>/colis" class="btn">colis</a>
         <a href="<?= BASE_URL ?>/livraison/create" class="btn">Créer livraison</a>
     </div>
 
@@ -23,7 +22,7 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Date</th>
+                <th>Date</th>   
                 <th>Statut</th>
                 <th>Chiffre d'affaire</th>
                 <th>Coût de revient</th>
