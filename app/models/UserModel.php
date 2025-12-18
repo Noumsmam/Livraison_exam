@@ -27,4 +27,11 @@
             $result=$STMT->fetch();
             return $result;
         }
+
+       public function getUser() {
+            $db = Flight::db();
+            $STMT = $db->prepare("SELECT * FROM user;");
+            $STMT->execute();
+            return $STMT->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

@@ -10,7 +10,7 @@ page : base.sql
 --     - table livraison_livraison: id, colis_id, chauffeur_id, vehicule_id, entrepot_id, adresse_destination, status_id, date_livraison, cout_revient, chiffre_affaire ok
     - insertion_donnees_test 
 
-- fonction (Nomena) 
+- fonction (Nomena) (a faire )
     - calcul_chiffre_affaire_livraison()
     - calcul_cout_total_livraison()
 
@@ -23,7 +23,7 @@ page : home.php
 -- - base (Anthony) ok
     -- - insertion des donnees dans la table livraison_user ok
 
-- fonction (Nomena)
+- fonction (Nomena) (en cours )
     -- - login() : ok
         -- - checkUser() ok 
     - getUser()

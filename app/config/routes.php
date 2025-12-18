@@ -14,7 +14,7 @@ use flight\net\Router;
 $router->group('', function(Router $router) use ($app) {
 
 	$router->get('/',function () {
-		require __DIR__ .'home';
+		Flight::render('chauffeur');
 	});
 
 
