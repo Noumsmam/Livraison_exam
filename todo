@@ -63,10 +63,10 @@ page : colis.php (en cours)
     - insertion colis (poids, valeur par kg)
 
 - fonction (Nomena)
-    - createColis()
-        saveColis()
-    - getColisById()
-        - getColisByLivraison()
+    -- - createColis()
+    --     saveColis()
+    -- - getColisById()
+    - getColisByLivraison()
 
 - design (Anthony)
     - formulaire création colis

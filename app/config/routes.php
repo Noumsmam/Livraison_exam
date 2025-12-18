@@ -19,7 +19,7 @@ $router->group('', function(Router $router) use ($app) {
 	});
 
 	$router->post('/login',[UserController::class,'login']);
-
+	
 
 	// $router->group('/api', function() use ($router) {	
 	// 	$router->get('/users', [ ApiExampleController::class, 'getUsers' ]);
