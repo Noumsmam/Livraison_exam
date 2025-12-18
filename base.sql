@@ -34,6 +34,7 @@ CREATE TABLE livraison_status (
 
 CREATE TABLE livraison_colis (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    description TEXT,
     poids_kg DECIMAL(10,2),
     valeur_par_kg DECIMAL(10,2)
 );
